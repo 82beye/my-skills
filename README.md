@@ -114,6 +114,63 @@ OpenAI Codex CLI를 사용하여 코드 분석, 리팩토링, 자동화된 편�
 - `workspace-write`: 로컬 파일 수정
 - `danger-full-access`: 네트워크 접근 포함 전체 권한
 
+### 6-1. [Codex-Claude Loop](./skills/codex-claude-loop/) 🔄
+Claude Code와 Codex를 결합한 이중 AI 엔지니어링 루프로 최상의 코드 품질을 보장합니다.
+
+**핵심 워크플로우:**
+- **Claude (계획 + 구현)** → **Codex (검증)** → **피드백** → **Claude (수정)** → **Codex (재검증)** → **반복**
+- Claude가 모든 코드 작성, Codex가 모든 검증 담당
+- 자체 수정 시스템으로 고품질 엔지니어링
+
+**주요 기능:**
+- 계획 단계: Claude가 아키텍처와 구현 계획 수립
+- 검증 단계: Codex가 계획의 로직 에러, 보안 취약점 검토
+- 구현 단계: Claude가 검증된 계획으로 코드 작성 (Edit/Write 도구 사용)
+- 코드 리뷰: Codex가 구현된 코드의 버그, 성능, 보안 검증
+- 수정 반영: Claude가 Codex 피드백 기반으로 코드 수정
+- 재검증: Codex가 수정사항 확인
+
+**언제 사용하나요:**
+- ✅ 복잡한 기능 개발 (여러 단계)
+- ✅ 보안/성능이 중요한 작업
+- ✅ 대규모 리팩토링
+- ✅ 높은 코드 품질이 필요할 때
+- ❌ 간단한 일회성 수정 (과함)
+- ❌ 프로토타입/실험 코드 (과함)
+
+**실전 예시:**
+```bash
+# 1. Claude가 OAuth 2.0 로그인 계획 수립
+# 2. Codex로 계획 검증
+echo "Review this plan..." | codex exec -m gpt-5-codex --config model_reasoning_effort="high" --sandbox read-only
+
+# 3. Claude가 검증된 계획으로 구현 (Edit/Write 도구 사용)
+# 4. Codex가 구현된 코드 리뷰
+echo "Review implementation..." | codex exec --sandbox read-only
+
+# 5. Claude가 피드백 반영하여 코드 수정
+# 6. Codex가 재검증
+echo "Verify fixes..." | codex exec resume --last
+```
+
+**역할 분담:**
+- **Claude**: 모든 코드 작성 및 수정
+- **Codex**: 모든 검증 및 리뷰
+
+**명령어 레퍼런스:**
+- 계획 검증: `codex exec -m gpt-5-codex --sandbox read-only`
+- 코드 리뷰: `codex exec --sandbox read-only`
+- 재검증: `codex exec resume --last` (설정 자동 상속)
+
+**모델 선택 가이드:**
+- `gpt-5`: 빠른 일반 작업
+- `gpt-5-codex`: 복잡한 코드 분석 (권장)
+
+**Reasoning Effort:**
+- `low`: 간단한 검증
+- `medium`: 일반적인 작업 (권장)
+- `high`: 보안/critical 로직
+
 ### 7. [Landing Page Guide](./skills/landing-page-guide/)
 Next.js와 React로 고품질 전환율 높은 랜딩페이지를 제작하기 위한 종합 가이드입니다.
 
@@ -241,6 +298,7 @@ prompt-enhancer
 flutter-init
 nextjs15-init
 codex
+codex-claude-loop          # Claude + Codex 이중 AI 루프
 landing-page-guide
 card-news-generator        # 기본 단색 배경 카드 생성
 card-news-generator (V2)   # 배경 이미지 지원 (동일 스킬, 고급 기능)
@@ -268,6 +326,9 @@ my-skills-hub/
 │   │   └── ...
 │   ├── codex/                   # Codex CLI 코드 리뷰/분석
 │   │   └── skill.md
+│   ├── codex-claude-loop/       # Claude + Codex 이중 AI 엔지니어링 루프
+│   │   ├── SKILL.md
+│   │   └── README.md
 │   ├── landing-page-guide/      # 랜딩페이지 제작 가이드
 │   │   ├── SKILL.md
 │   │   └── references/
@@ -289,6 +350,8 @@ my-skills-hub/
 - [Flutter Init 상세 정보](./skills/flutter-init/skill.md)
 - [Next.js 15 Init 상세 정보](./skills/nextjs15-init/skill.md)
 - [Codex 상세 정보](./skills/codex/skill.md)
+- [Codex-Claude Loop 상세 정보](./skills/codex-claude-loop/SKILL.md)
+- [Codex-Claude Loop 사용법](./skills/codex-claude-loop/README.md)
 - [Landing Page Guide 상세 정보](./skills/landing-page-guide/SKILL.md)
 - [Card News Generator 상세 정보](./skills/card-news-generator/SKILL.md)
 - [Card News Generator V2 상세 정보](./skills/card-news-generator/V2_FEATURES.md)
