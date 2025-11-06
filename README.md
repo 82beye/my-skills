@@ -267,6 +267,58 @@ python auto_generator.py \
 - 전문적이고 세련된 디자인이 필요한 경우
 - 배경 이미지로 브랜드 아이덴티티 강화
 
+### 10. [Web to Markdown](./skills/web-to-markdown/) 🌐
+웹페이지 URL을 마크다운 형식으로 변환하여 저장하는 스킬입니다.
+
+**주요 기능:**
+- 3가지 변환 모드 지원
+  - **일반 모드**: 읽기 좋은 마크다운 변환
+  - **AI 최적화 모드**: AI 컨텍스트용 구조화된 형태 (YAML 프론트매터, 핵심 요약 포함)
+  - **듀얼 모드**: 원본 + AI 최적화 버전 2개 파일 동시 생성 ⭐
+- 여러 URL 일괄 변환
+- 특정 섹션만 추출
+- 마크다운 포맷 커스터마이징
+- WebFetch 자동 캐싱 (15분)
+
+**변환 모드:**
+```
+# 일반 모드
+웹페이지를 마크다운으로 변환해줘
+
+# AI 최적화 모드
+AI가 읽기 좋게 변환해줘
+컨텍스트로 사용하기 좋게 변환해줘
+
+# 듀얼 모드 (권장)
+원본이랑 AI 최적화 버전 둘 다 만들어줘
+```
+
+**AI 최적화 모드 특징:**
+- YAML 프론트매터 (제목, URL, 주제, 핵심 요약 등)
+- 구조화된 섹션 (핵심 요약, 주요 내용, 인사이트, 실용적 적용)
+- 토큰 30-50% 절감
+- AI가 3초 안에 핵심 파악 가능
+
+**파일명 규칙:**
+- 원본: `article.md`
+- AI 최적화: `article.context.md`
+
+**사용 시나리오:**
+- 기술 문서 아카이빙
+- 블로그 글 백업
+- 학습 자료 구축
+- RAG 시스템용 데이터 준비
+- AI 에이전트 컨텍스트 자료 생성
+
+**사용 예시:**
+```
+User: https://docs.python.org/3/tutorial 원본이랑 AI 최적화 버전 둘 다 만들어줘
+
+Claude: 듀얼 모드로 변환하겠습니다.
+- python-tutorial.md (원본 - 사람이 읽기 좋음)
+- python-tutorial.context.md (AI 최적화 - 컨텍스트용)
+```
+
 ## 스킬 사용 방법
 
 ### 설치
@@ -302,6 +354,7 @@ codex-claude-loop          # Claude + Codex 이중 AI 루프
 landing-page-guide
 card-news-generator        # 기본 단색 배경 카드 생성
 card-news-generator (V2)   # 배경 이미지 지원 (동일 스킬, 고급 기능)
+web-to-markdown            # 웹페이지를 마크다운으로 변환
 ```
 
 ## 폴더 구조
@@ -334,7 +387,10 @@ my-skills-hub/
 │   │   └── references/
 │   │       ├── 11-essential-elements.md
 │   │       └── component-examples.md
-│   └── card-news-generator/     # 카드 뉴스 자동 생성
+│   ├── card-news-generator/     # 카드 뉴스 자동 생성
+│   │   ├── SKILL.md
+│   │   └── ...
+│   └── web-to-markdown/         # 웹페이지 마크다운 변환
 │       ├── SKILL.md
 │       └── ...
 └── README.md                     # 이 파일
@@ -355,6 +411,7 @@ my-skills-hub/
 - [Landing Page Guide 상세 정보](./skills/landing-page-guide/SKILL.md)
 - [Card News Generator 상세 정보](./skills/card-news-generator/SKILL.md)
 - [Card News Generator V2 상세 정보](./skills/card-news-generator/V2_FEATURES.md)
+- [Web to Markdown 상세 정보](./.claude/skills/web-to-markdown/SKILL.md)
 
 ## 기여
 
