@@ -6,7 +6,12 @@
       "Bash(flutter create:*)",
       "Bash(flutter --version:*)",
       "Read(//Users/symverse/.claude/skills/**)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "WebFetch(domain:code.claude.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)"
     ],
     "deny": [],
     "ask": []

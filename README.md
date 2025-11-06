@@ -2,6 +2,28 @@
 
 Claude Code를 위한 커스텀 스킬 모음입니다. 개발 생산성을 높이기 위한 다양한 자동화 스킬들을 제공합니다.
 
+## 빠른 설치
+
+| 스킬 이름 | 한줄 설명 | 마켓 설치 명령어 |
+|----------|---------|---------------|
+| **Flutter Init** | Flutter 프로젝트를 Clean Architecture로 자동 생성 | `/plugin marketplace install suji-father-marketplace@flutter-init` |
+| **Next.js 15 Init** | Next.js 15 프로젝트를 App Router로 자동 생성 | `/plugin marketplace install suji-father-marketplace@nextjs15-init` |
+| **Code Changelog** | AI 코드 변경사항을 자동 문서화하고 웹에서 실시간 확인 | `/plugin marketplace install suji-father-marketplace@code-changelog` |
+| **Codex** | OpenAI Codex CLI로 코드 분석, 리팩토링, 자동 편집 | `/plugin marketplace install suji-father-marketplace@codex` |
+| **Codex-Claude Loop** | Claude + Codex 이중 AI 엔지니어링 루프로 최고 품질 보장 | `/plugin marketplace install suji-father-marketplace@codex-claude-loop` |
+| **Meta Prompt Generator** | 구조화된 커스텀 슬래시 커맨드를 자동 생성 | `/plugin marketplace install suji-father-marketplace@meta-prompt-generator` |
+| **Prompt Enhancer** | 프로젝트 컨텍스트 분석으로 간단한 요청을 상세 요구사항으로 변환 | `/plugin marketplace install suji-father-marketplace@prompt-enhancer` |
+| **Web to Markdown** | 웹페이지를 마크다운으로 변환 (일반/AI 최적화/듀얼 모드) | `/plugin marketplace install suji-father-marketplace@web-to-markdown` |
+| **Card News Generator** | 600x600 인스타그램 스타일 카드 뉴스 시리즈 자동 생성 | `/plugin marketplace install suji-father-marketplace@card-news-generator` |
+| **Card News Generator V2** | 배경 이미지 지원 카드 뉴스 생성기 (고급 기능) | `/plugin marketplace install suji-father-marketplace@card-news-generator-v2` |
+| **Landing Page Guide** | 전환율 높은 랜딩페이지 제작 가이드 (11가지 필수 요소) | `/plugin marketplace install suji-father-marketplace@landing-page-guide` |
+
+### 마켓플레이스 추가
+
+```bash
+/plugin marketplace add bear2u/claude-plugins
+```
+
 ## 스킬 목록
 
 ### 1. [Code Changelog](./skills/code-changelog/)
@@ -321,7 +343,84 @@ Claude: 듀얼 모드로 변환하겠습니다.
 
 ## 스킬 사용 방법
 
-### 설치
+### 방법 1: 마켓플레이스를 통한 설치 (권장)
+
+#### 1. 마켓플레이스 추가
+
+```bash
+/plugin marketplace add bear2u/claude-plugins
+```
+
+#### 2. 사용 가능한 플러그인 확인
+
+```bash
+/plugin marketplace list
+```
+
+#### 3. 원하는 플러그인 설치
+
+```bash
+# Flutter 프로젝트 초기화
+/plugin marketplace install suji-father-marketplace@flutter-init
+
+# Next.js 15 프로젝트 초기화
+/plugin marketplace install suji-father-marketplace@nextjs15-init
+
+# 코드 변경사항 자동 문서화
+/plugin marketplace install suji-father-marketplace@code-changelog
+
+# Codex CLI 통합
+/plugin marketplace install suji-father-marketplace@codex
+
+# Codex-Claude 이중 AI 루프
+/plugin marketplace install suji-father-marketplace@codex-claude-loop
+
+# 메타 프롬프트 생성기
+/plugin marketplace install suji-father-marketplace@meta-prompt-generator
+
+# 프롬프트 향상기
+/plugin marketplace install suji-father-marketplace@prompt-enhancer
+
+# 웹페이지 마크다운 변환
+/plugin marketplace install suji-father-marketplace@web-to-markdown
+
+# 카드 뉴스 생성기
+/plugin marketplace install suji-father-marketplace@card-news-generator
+
+# 카드 뉴스 생성기 V2 (배경 이미지 지원)
+/plugin marketplace install suji-father-marketplace@card-news-generator-v2
+
+# 랜딩페이지 가이드
+/plugin marketplace install suji-father-marketplace@landing-page-guide
+```
+
+#### 4. 설치된 플러그인 확인
+
+```bash
+/plugin list
+```
+
+#### 5. 플러그인 업데이트
+
+```bash
+# 특정 플러그인 업데이트
+/plugin update suji-father-marketplace@flutter-init
+
+# 또는 모든 플러그인 업데이트
+/plugin update
+```
+
+#### 6. 플러그인 삭제
+
+```bash
+# 특정 플러그인 삭제
+/plugin remove flutter-init
+
+# 또는 마켓플레이스 전체 삭제
+/plugin marketplace remove suji-father-marketplace
+```
+
+### 방법 2: 수동 설치
 
 1. 스킬을 Claude Code 스킬 디렉토리로 복사:
 
