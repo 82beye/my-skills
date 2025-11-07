@@ -560,7 +560,74 @@ my-skills-hub/
 
 MIT License
 
+## Changelog
+
+### [1.5.0] - 2025-11-07
+
+#### Added
+- **web-to-markdown**: 동적 콘텐츠 처리 기능 추가 ⭐
+  - WebFetch 실패 시 Playwright 자동 폴백
+  - MCP Playwright 및 Node Playwright 지원
+  - JavaScript 렌더링 페이지 자동 감지
+  - AskUserQuestion으로 사용자 확인 프로세스
+- **SKILL_DISTRIBUTION_GUIDE.md**: NPM 패키지로 스킬 배포하는 완전 가이드 추가
+  - NPM 패키지 구조 만들기
+  - 첫 배포 및 업데이트 방법
+  - 버전 관리 Best Practices
+  - FAQ 및 실전 예제
+
+#### Changed
+- **README.md**: web-to-markdown 스킬 설명에 동적 콘텐츠 처리 기능 추가
+- **README.md**: 동적 콘텐츠 사용 예시 추가
+
+#### Technical Details
+- Playwright를 통한 Chromium 브라우저 자동화
+- Cheerio를 통한 HTML 파싱 및 마크다운 변환
+- React, Vue, Next.js 등 SPA 페이지 완벽 지원
+
+### [1.4.0] - 2025-10-29
+
+#### Added
+- **card-news-generator-v2**: 배경 이미지 지원 기능
+- **landing-page-guide**: 전환율 높은 랜딩페이지 제작 가이드
+- **midjourney-cardnews-bg**: Midjourney 프롬프트 생성 스킬
+
+### [1.3.0] - 2025-10-27
+
+#### Added
+- **codex-claude-cursor-loop**: Claude + Codex + Cursor 3중 AI 루프
+- **codex-claude-loop**: Claude + Codex 이중 AI 엔지니어링 루프
+
+### [1.2.0] - 2025-10-25
+
+#### Added
+- **web-to-markdown**: 웹페이지 마크다운 변환 스킬
+  - 일반 모드
+  - AI 최적화 모드
+  - 듀얼 모드
+- **card-news-generator-v2**: 배경 이미지 지원 버전
+
+### [1.1.0] - 2025-10-23
+
+#### Added
+- **flutter-init**: Flutter Clean Architecture 프로젝트 생성
+- **nextjs15-init**: Next.js 15 App Router 프로젝트 생성
+- **code-changelog**: AI 코드 변경사항 자동 문서화
+- **meta-prompt-generator**: 구조화된 커스텀 슬래시 커맨드 생성
+- **prompt-enhancer**: 프로젝트 컨텍스트 기반 프롬프트 향상
+
+### [1.0.0] - 2025-10-20
+
+#### Added
+- 초기 릴리즈
+- **card-news-generator**: 인스타그램 카드 뉴스 생성
+- **codex**: OpenAI Codex CLI 통합
+- 마켓플레이스 설정 및 배포
+
+---
+
 ## 참고
 
 이 스킬들은 Claude Code의 공식 문서를 참고하여 작성되었습니다:
 - [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code)
+- [Keep a Changelog](https://keepachangelog.com/)
