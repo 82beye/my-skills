@@ -11,7 +11,9 @@
       "WebFetch(domain:github.com)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "WebFetch(domain:www.codedeck.kr)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
