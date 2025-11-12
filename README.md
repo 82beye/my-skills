@@ -34,6 +34,9 @@ Claude Code를 위한 커스텀 스킬 모음입니다. 개발 생산성을 높�
 | **Card News Generator** | 600x600 인스타그램 스타일 카드 뉴스 시리즈 자동 생성 | `/plugin marketplace install suji-father-marketplace@card-news-generator` |
 | **Card News Generator V2** | 배경 이미지 지원 카드 뉴스 생성기 (고급 기능) | `/plugin marketplace install suji-father-marketplace@card-news-generator-v2` |
 | **Landing Page Guide** | 전환율 높은 랜딩페이지 제작 가이드 (11가지 필수 요소) | `/plugin marketplace install suji-father-marketplace@landing-page-guide` |
+| **Code Prompt Coach** | Claude Code 세션 로그 분석으로 프롬프트 품질 향상 | `/plugin marketplace install suji-father-marketplace@code-prompt-coach` |
+| **Codex-Claude-Cursor Loop** | Claude + Codex + Cursor 3중 AI 엔지니어링 루프 | `/plugin marketplace install suji-father-marketplace@codex-claude-cursor-loop` |
+| **Midjourney Card News BG** | 카드 뉴스용 Midjourney 배경 이미지 프롬프트 생성 | `/plugin marketplace install suji-father-marketplace@midjourney-cardnews-bg` |
 
 ### 마켓플레이스 추가
 
@@ -376,6 +379,136 @@ Claude: ⏳ Playwright로 페이지 로딩...
         ✅ 마크다운 변환 완료 (1,442줄)
 ```
 
+### 11. [Code Prompt Coach](./skills/code-prompt-coach/)
+Claude Code 세션 로그를 분석하여 프롬프트 품질을 향상시키고 AI 네이티브 엔지니어가 되도록 돕는 스킬입니다.
+
+**주요 기능:**
+- 8가지 분석 기능 통합 종합 리포트
+- 프롬프트 품질 분석 (컨텍스트 인식)
+- 토큰 사용량 및 비용 분석 (모델별 요금 적용)
+- 도구 사용 패턴 (MCP 도구 포함)
+- 세션 효율성 및 생산성 시간 패턴
+- 파일 수정 히트맵
+- 에러 및 복구 패턴 분석
+- 프로젝트 전환 오버헤드 측정
+
+**분석 가능 항목:**
+- ✍️ 프롬프트 품질 개선
+- 🛠️ 도구 사용 최적화
+- ⚡ 효율성 향상
+- 🕐 최적의 생산 시간대 파악
+- 🔥 코드 핫스팟 식별
+- 🔄 컨텍스트 전환 비용 절감
+- 🐛 에러 패턴 학습
+
+**사용 시나리오:**
+```
+# 종합 분석 (권장)
+"Give me a general analysis of my Claude Code usage"
+
+# 프로젝트별 분석
+"Analyze my prompt quality for ~/workspaces/my-project"
+
+# 특정 지표 분석
+"How much have I spent on Claude Code this month?"
+"When am I most productive?"
+"What tools do I use most?"
+```
+
+**특징:**
+- 로컬 로그만 분석 (`~/.claude/projects/`)
+- 컨텍스트 인식 프롬프트 평가 (git commit, run tests 등 효율적 인식)
+- 실제 청구 금액과 일치하는 토큰 중복 제거
+- 모델별 요금 정확 계산 (Opus, Sonnet, Haiku)
+
+### 12. [Codex-Claude-Cursor Loop](./skills/codex-claude-cursor-loop/) 🔄
+Claude Code, Codex, Cursor Agent를 결합한 3중 AI 엔지니어링 루프로 최상의 코드 품질을 보장합니다.
+
+**핵심 워크플로우:**
+1. **Claude (계획)** → 아키텍처 및 구현 계획 수립
+2. **Codex (계획 검증)** → 로직 에러, 보안 취약점 검토
+3. **Cursor (구현)** → 검증된 계획으로 코드 작성
+4. **Codex (코드 리뷰)** → 버그, 성능, 보안 검증
+5. **Claude (최종 리뷰)** → 아키텍처 확인 및 최종 승인
+6. **반복** → 문제 발견 시 수정 후 재검증
+
+**역할 분담:**
+- **Claude Code**: 모든 계획 및 아키텍처, 최종 승인
+- **Codex**: 모든 검증 및 리뷰 (계획 + 코드)
+- **Cursor Agent**: 모든 구현 및 코딩
+
+**언제 사용하나요:**
+- ✅ 복잡한 기능 개발 (여러 단계)
+- ✅ 보안/성능이 중요한 작업
+- ✅ 대규모 리팩토링
+- ✅ 높은 코드 품질이 필요할 때
+- ❌ 간단한 일회성 수정 (과함)
+
+**주요 명령어:**
+```bash
+# 1. 계획 검증 (Codex)
+echo "Review this plan..." | codex exec -m gpt-5-codex --config model_reasoning_effort="high" --sandbox read-only
+
+# 2. 구현 (Cursor - 새 세션)
+cursor-agent --model "composer-1" -p --force "Implement this plan..."
+
+# 3. 구현 (Cursor - 세션 재개)
+cursor-agent --resume="session-id" -p --force "Continue implementation..."
+
+# 4. 코드 리뷰 (Codex)
+echo "Review implementation..." | codex exec --sandbox read-only
+
+# 5. 수정 (Cursor - 동일 세션)
+cursor-agent --resume="session-id" -p --force "Fix these issues..."
+```
+
+**사용 시나리오:**
+- OAuth 2.0 로그인 구현
+- 결제 시스템 통합
+- 복잡한 상태 관리 로직
+- 대규모 코드 리팩토링
+
+### 13. [Midjourney Card News BG](./skills/midjourney-cardnews-bg/)
+600x600 카드 뉴스용 배경 이미지를 위한 최적화된 Midjourney 프롬프트를 생성합니다.
+
+**주요 기능:**
+- 주제/스타일/분위기 기반 프롬프트 자동 생성
+- 텍스트 오버레이에 최적화된 배경
+- 다양한 스타일 변형 제공 (3-5가지)
+- 1:1 비율 (600x600px) 최적화
+
+**스타일 카테고리:**
+- **비즈니스/테크**: 클린 그라디언트, 블루/퍼플 톤
+- **건강/웰니스**: 소프트 파스텔, 그린/피치 톤
+- **금융/투자**: 볼드 그라디언트, 네이비/골드 톤
+- **교육/학습**: 친근한 컬러, 옐로우/오렌지 톤
+- **음식/라이프스타일**: 따뜻한 톤, 자연 텍스처
+- **크리에이티브/아트**: 대담한 패턴, 다채로운 컬러
+
+**프롬프트 구조:**
+```
+[주제/장면 설명], [스타일 키워드], [색상 팔레트], [텍스처/분위기], [기술 사양] --ar 1:1 --v 6
+```
+
+**사용 예시:**
+```
+주제: 재테크 팁
+
+1. 메인 추천:
+elegant geometric patterns, premium professional style, navy and gold gradient, subtle texture with depth, sophisticated minimal design --ar 1:1 --v 6
+→ 전문적이고 신뢰감 있는 금융 분위기
+
+2. 대안 1:
+friendly abstract shapes, approachable modern style, soft blue and mint colors, clean and inviting atmosphere --ar 1:1 --v 6
+→ 친근하고 접근하기 쉬운 느낌
+```
+
+**특징:**
+- 텍스트 가독성을 고려한 배경 디자인
+- 중앙 60% 영역 균일하게 유지
+- 복잡한 요소는 모서리 배치
+- 한국어 주제 지원 (영어 프롬프트 생성)
+
 ## 스킬 사용 방법
 
 ### 방법 1: 마켓플레이스를 통한 설치 (권장)
@@ -427,6 +560,15 @@ Claude: ⏳ Playwright로 페이지 로딩...
 
 # 랜딩페이지 가이드
 /plugin marketplace install suji-father-marketplace@landing-page-guide
+
+# 코드 프롬프트 코치
+/plugin marketplace install suji-father-marketplace@code-prompt-coach
+
+# Codex-Claude-Cursor 루프
+/plugin marketplace install suji-father-marketplace@codex-claude-cursor-loop
+
+# Midjourney 카드 뉴스 배경
+/plugin marketplace install suji-father-marketplace@midjourney-cardnews-bg
 ```
 
 #### 4. 설치된 플러그인 확인
@@ -485,10 +627,13 @@ flutter-init
 nextjs15-init
 codex
 codex-claude-loop          # Claude + Codex 이중 AI 루프
+codex-claude-cursor-loop   # Claude + Codex + Cursor 3중 AI 루프
 landing-page-guide
 card-news-generator        # 기본 단색 배경 카드 생성
 card-news-generator (V2)   # 배경 이미지 지원 (동일 스킬, 고급 기능)
 web-to-markdown            # 웹페이지를 마크다운으로 변환
+code-prompt-coach          # Claude Code 세션 로그 분석
+midjourney-cardnews-bg     # Midjourney 카드 뉴스 배경 프롬프트 생성
 ```
 
 ## 폴더 구조
@@ -524,7 +669,16 @@ my-skills-hub/
 │   ├── card-news-generator/     # 카드 뉴스 자동 생성
 │   │   ├── SKILL.md
 │   │   └── ...
-│   └── web-to-markdown/         # 웹페이지 마크다운 변환
+│   ├── web-to-markdown/         # 웹페이지 마크다운 변환
+│   │   ├── SKILL.md
+│   │   └── ...
+│   ├── code-prompt-coach/       # Claude Code 세션 로그 분석
+│   │   ├── SKILL.md
+│   │   └── ...
+│   ├── codex-claude-cursor-loop/  # Claude + Codex + Cursor 3중 AI 루프
+│   │   ├── SKILL.md
+│   │   └── ...
+│   └── midjourney-cardnews-bg/  # Midjourney 카드 뉴스 배경 프롬프트
 │       ├── SKILL.md
 │       └── ...
 └── README.md                     # 이 파일
@@ -546,6 +700,9 @@ my-skills-hub/
 - [Card News Generator 상세 정보](./skills/card-news-generator/SKILL.md)
 - [Card News Generator V2 상세 정보](./skills/card-news-generator/V2_FEATURES.md)
 - [Web to Markdown 상세 정보](./.claude/skills/web-to-markdown/SKILL.md)
+- [Code Prompt Coach 상세 정보](./skills/code-prompt-coach/SKILL.md)
+- [Codex-Claude-Cursor Loop 상세 정보](./skills/codex-claude-cursor-loop/SKILL.md)
+- [Midjourney Card News BG 상세 정보](./skills/midjourney-cardnews-bg/SKILL.md)
 
 ## 기여
 
@@ -561,6 +718,31 @@ my-skills-hub/
 MIT License
 
 ## Changelog
+
+### [1.6.0] - 2025-11-12
+
+#### Added
+- **code-prompt-coach**: Claude Code 세션 로그 분석 스킬 ⭐
+  - 프롬프트 품질 향상 (컨텍스트 인식)
+  - 토큰 사용량 및 비용 분석 (모델별 요금)
+  - 8가지 분석 기능 통합 종합 리포트
+  - 도구 사용 패턴, 효율성, 생산성, 파일 히트맵 분석
+- **codex-claude-cursor-loop**: Claude + Codex + Cursor 3중 AI 엔지니어링 루프
+  - Claude가 계획 및 아키텍처 담당
+  - Codex가 계획 검증 및 코드 리뷰 담당
+  - Cursor Agent가 모든 구현 담당
+  - 순차적 검증으로 최고 품질 보장
+- **midjourney-cardnews-bg**: Midjourney 카드 뉴스 배경 프롬프트 생성기
+  - 600x600px 1:1 비율 최적화
+  - 텍스트 오버레이 고려 배경 디자인
+  - 주제/스타일별 다양한 변형 제공
+  - 한국어 주제 지원
+
+#### Changed
+- **README.md**: 새로운 3개 스킬 추가 및 설명 업데이트
+- 빠른 설치 테이블에 신규 스킬 추가
+- 마켓플레이스 설치 명령어 추가
+- 실행 방법 및 폴더 구조 업데이트
 
 ### [1.5.0] - 2025-11-07
 

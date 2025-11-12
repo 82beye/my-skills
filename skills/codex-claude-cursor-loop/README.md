@@ -280,7 +280,7 @@ Cursor: 모든 코드 작성 및 수정
 6. 🔍 Codex 재검증 통과!
 
 7. 🔨 Cursor가 구현
-   $ cursor-agent --model "claude-3.5-sonnet" -p --force "Implement this plan..."
+   $ cursor-agent --model "composer" -p --force "Implement this plan..."
    [Cursor가 코드 작성 완료]
 
 8. 🔍 Codex가 코드 리뷰

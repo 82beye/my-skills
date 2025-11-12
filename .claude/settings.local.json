@@ -13,7 +13,11 @@
       "Bash(git commit:*)",
       "Bash(git push)",
       "WebFetch(domain:www.codedeck.kr)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Skill(code-prompt-coach)",
+      "Bash(chmod:*)",
+      "Bash(/tmp/analyze_projects.sh)",
+      "Bash(python3:*)"
     ],
     "deny": [],
     "ask": []
