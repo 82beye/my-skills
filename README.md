@@ -14,6 +14,7 @@ Claude Code를 위한 커스텀 스킬 모음입니다. 개발 생산성을 높�
 `Flutter` `React` `TypeScript` `JavaScript` `Python` `Dart`
 
 **👉 [CodeDeck 바로가기](https://www.codedeck.kr)**
+**📺 [YouTube에서 보기](https://youtu.be/6Rayxu3rZOU?si=CG_C5IcpDP_ZzKKV)**
 
 </div>
 
@@ -33,7 +34,7 @@ Claude Code를 위한 커스텀 스킬 모음입니다. 개발 생산성을 높�
 | **Web to Markdown** | 웹페이지를 마크다운으로 변환 (일반/AI 최적화/듀얼 모드) | `/plugin marketplace install suji-father-marketplace@web-to-markdown` |
 | **Card News Generator** | 600x600 인스타그램 스타일 카드 뉴스 시리즈 자동 생성 | `/plugin marketplace install suji-father-marketplace@card-news-generator` |
 | **Card News Generator V2** | 배경 이미지 지원 카드 뉴스 생성기 (고급 기능) | `/plugin marketplace install suji-father-marketplace@card-news-generator-v2` |
-| **Landing Page Guide** | 전환율 높은 랜딩페이지 제작 가이드 (11가지 필수 요소) | `/plugin marketplace install suji-father-marketplace@landing-page-guide` |
+| **Landing Page Guide V2** | 아름다운 디자인 + 높은 전환율 랜딩페이지 제작 가이드 | `/plugin marketplace install suji-father-marketplace@landing-page-guide-v2` |
 | **Code Prompt Coach** | Claude Code 세션 로그 분석으로 프롬프트 품질 향상 | `/plugin marketplace install suji-father-marketplace@code-prompt-coach` |
 | **Codex-Claude-Cursor Loop** | Claude + Codex + Cursor 3중 AI 엔지니어링 루프 | `/plugin marketplace install suji-father-marketplace@codex-claude-cursor-loop` |
 | **Midjourney Card News BG** | 카드 뉴스용 Midjourney 배경 이미지 프롬프트 생성 | `/plugin marketplace install suji-father-marketplace@midjourney-cardnews-bg` |
@@ -213,39 +214,104 @@ echo "Verify fixes..." | codex exec resume --last
 - `medium`: 일반적인 작업 (권장)
 - `high`: 보안/critical 로직
 
-### 7. [Landing Page Guide](./skills/landing-page-guide/)
-Next.js와 React로 고품질 전환율 높은 랜딩페이지를 제작하기 위한 종합 가이드입니다.
+### 7. [Landing Page Guide V2](./skills/landing-page-guide-v2/) ⭐ UPDATED
 
-**주요 기능:**
-- DESIGNNAS의 11가지 필수 요소 프레임워크 적용
-- ShadCN UI 컴포넌트 통합
-- SEO 최적화 및 접근성 표준 준수
-- 반응형 디자인 및 성능 최적화
+<div align="center">
 
-**11가지 필수 요소:**
-1. 키워드가 포함된 URL
-2. 회사 로고 (상단 왼쪽)
-3. SEO 최적화된 제목과 부제목
-4. 주요 CTA (히어로 섹션)
-5. 사회적 증거 (리뷰, 통계)
-6. 이미지 또는 동영상
-7. 핵심 이점/기능 (3-6개)
-8. 고객 후기 (4-6개)
-9. FAQ 섹션 (5-10개 질문)
-10. 최종 CTA (하단)
-11. 연락처 정보 및 법적 페이지
+**독특하고 아름다운 디자인과 높은 전환율을 동시에 달성하는 랜딩페이지 제작 가이드**
+
+[![참고 이미지 보기](https://img.shields.io/badge/🎨_참고_이미지_보기-4A90E2?style=for-the-badge)](./skills/landing-page-guide-v2/landing-page-v2.png)
+
+</div>
+
+일반적인 AI 생성 템플릿을 벗어나 **전환율과 브랜드 각인을 동시에** 달성하는 랜딩페이지를 만드는 완전 가이드입니다.
+
+**핵심 철학:**
+- 💎 **전환율 + 기억에 남는 브랜드**: 일반적인 템플릿 같은 페이지는 전환도, 브랜드 각인도 실패합니다
+- 🎯 **의도적인 디자인**: 모든 미적 선택은 의도적이어야 하며, 기본값이 아니어야 합니다
+- 🚫 **Generic AI 미학 탈피**: Inter 폰트, 보라색 그라데이션, 예측 가능한 레이아웃 피하기
+
+**V2 주요 개선사항:**
+- ✨ **Design Thinking First**: 코딩 전 미적 방향성 정의 (미니멀, 맥시멀리스트, 레트로, 유기적 등 6가지 방향)
+- ✨ **Typography Excellence**: 독특한 폰트 선택 가이드 (Space Grotesk, Clash Display 등 - Inter/Roboto 금지)
+- ✨ **Advanced Animation**: Staggered reveals, parallax, scroll-triggered animations
+- ✨ **Spatial Composition**: 비대칭, 오버랩, 대각선 흐름으로 예상 밖의 레이아웃 (grid-breaking)
+- ✨ **Rich Backgrounds**: Gradient meshes, noise textures, geometric patterns, layered transparencies
+- ✨ **Component-Level Design Guide**: 11가지 필수 요소 각각에 대한 디자인 우수성 기준과 예제
+
+**11가지 필수 요소 (전환율) + 디자인 우수성 (기억 각인):**
+1. ✅ **키워드 URL** (SEO 최적화)
+2. ✅ **로고 + 애니메이션 헤더** (스크롤 시 backdrop blur 전환)
+3. ✅ **MASSIVE 타이포그래피** (4rem-6rem+, 그라데이션 텍스트, staggered animation)
+4. ✅ **독특한 CTA 디자인** (pill shapes, 마이크로 인터랙션, hover scale)
+5. ✅ **애니메이션된 소셜 프루프** (숫자 count-up effect, 5성급 리뷰, 통계)
+6. ✅ **깊이감 있는 미디어** (3D tilt, 그림자, 반사, parallax, 폰 mockup)
+7. ✅ **비대칭 레이아웃** (커스텀 아이콘, 그라데이션 배경, asymmetric grid)
+8. ✅ **독특한 카드 디자인** (커스텀 아바타, 그라데이션 테두리, glassmorphism)
+9. ✅ **부드러운 아코디언** (커스텀 chevron 회전, 스무스 expand/collapse)
+10. ✅ **드라마틱한 최종 CTA** (전체 폭, 강력한 배경, urgency indicators)
+11. ✅ **세련된 멀티 컬럼 푸터** (소셜 아이콘 hover effects, 뉴스레터 signup)
 
 **기술 스택:**
-- Next.js 14+ (App Router)
-- TypeScript
-- Tailwind CSS
-- ShadCN UI
+- **Next.js 15+** (App Router, RSC)
+- **TypeScript** (Strict Mode)
+- **Tailwind CSS** (완전 커스터마이징 - default config 탈피)
+- **ShadCN UI** (시작점, 반드시 heavy customization!)
+- **Framer Motion** (고급 애니메이션, optional)
+
+**Design System 구축:**
+- CSS Variables로 색상/타이포그래피/spacing/animation 시스템 정의
+- 독특한 Display Font (Space Grotesk, Clash Display, Cabinet Grotesk) + 세련된 Body Font (DM Sans, General Sans, Geist)
+- Dominant (60%) / Accent (10%) / Neutral (30%) 색상 팔레트
+- 일관된 애니메이션 타이밍 (cubic-bezier easing) 및 stagger delays
+
+**구현 워크플로우:**
+1. **Design Thinking First** (코딩 전 필수!)
+   - 브랜드 personality 파악
+   - Aesthetic direction 선택 (minimalist/maximalist/retro/organic/editorial/brutalist)
+   - Typography, color palette, motion strategy 정의
+2. **Setup Design System** (CSS variables in globals.css)
+3. **SEO Metadata** (layout.tsx)
+4. **Component-by-Component** (Header → Hero → Media → Benefits → Testimonials → FAQ → Final CTA → Footer)
+5. **Animations** (Entrance, scroll-triggered, hover states)
+6. **Responsive Design** (Mobile-first)
+7. **Performance & Accessibility**
+
+**검증 체크리스트:**
+- ✅ 11가지 필수 요소 모두 포함
+- ✅ 독특한 폰트 사용 (NOT Inter/Roboto)
+- ✅ 독특한 색상 팔레트 (NOT 보라 그라데이션)
+- ✅ 예상 밖의 레이아웃 (NOT 정중앙 대칭 그리드)
+- ✅ Rich backgrounds (NOT 순백색)
+- ✅ 애니메이션 (staggered, scroll-triggered)
+- ✅ ShadCN heavily customized
+- ✅ 접근성 (WCAG AA, 키보드 네비게이션, reduced motion)
+- ✅ 성능 (Next.js Image, lazy loading, 폰트 최적화)
 
 **사용 시나리오:**
-- 마케팅 랜딩 페이지 제작
-- 제품 소개 페이지 개발
-- 전환율 최적화가 필요한 프로모션 페이지
-- SaaS/이커머스/서비스/이벤트 랜딩 페이지
+- 🎨 **일반 템플릿을 벗어나고 싶을 때**
+- 🚀 **SaaS 제품 론칭** (Free trial CTA, feature comparison)
+- 🛍️ **이커머스 제품 페이지** (Product images, urgency, return policy)
+- 💼 **서비스/에이전시** (Portfolio showcase, case studies)
+- 🎫 **이벤트/웨비나** (Countdown timer, speaker profiles)
+- 📱 **모바일 앱 소개** (App Store badges, 디바이스 mockup, 스크린샷)
+- 💡 **브랜드 차별화가 필수인 경우**
+- ⚡ **전환율 + 브랜드 각인 모두 중요한 경우**
+
+**실전 예제:**
+모바일 앱 랜딩페이지 (이 레포의 `landing-page-v2-test/` 폴더)
+- Modern & Sleek aesthetic
+- Space Grotesk + DM Sans
+- Purple-Blue gradient primary + Cyan accent
+- 3개 phone mockups (CSS-only UI)
+- 모든 11가지 필수 요소 구현
+- Staggered animations, scroll effects
+- 완전 반응형 + 접근성
+
+**참고 자료:**
+- [11 Essential Elements 상세 가이드](./skills/landing-page-guide-v2/references/11-essential-elements.md)
+- [Component Examples (ShadCN)](./skills/landing-page-guide-v2/references/component-examples.md)
+- [스킬 전체 문서](./skills/landing-page-guide-v2/SKILL.md)
 
 ### 8. [Card News Generator](./skills/card-news-generator/)
 600x600 인스타그램 스타일 카드 뉴스 시리즈를 자동으로 생성합니다.
@@ -558,8 +624,8 @@ friendly abstract shapes, approachable modern style, soft blue and mint colors, 
 # 카드 뉴스 생성기 V2 (배경 이미지 지원)
 /plugin marketplace install suji-father-marketplace@card-news-generator-v2
 
-# 랜딩페이지 가이드
-/plugin marketplace install suji-father-marketplace@landing-page-guide
+# 랜딩페이지 가이드 V2
+/plugin marketplace install suji-father-marketplace@landing-page-guide-v2
 
 # 코드 프롬프트 코치
 /plugin marketplace install suji-father-marketplace@code-prompt-coach
@@ -628,7 +694,7 @@ nextjs15-init
 codex
 codex-claude-loop          # Claude + Codex 이중 AI 루프
 codex-claude-cursor-loop   # Claude + Codex + Cursor 3중 AI 루프
-landing-page-guide
+landing-page-guide-v2      # 아름다운 디자인 + 높은 전환율 랜딩페이지 가이드
 card-news-generator        # 기본 단색 배경 카드 생성
 card-news-generator (V2)   # 배경 이미지 지원 (동일 스킬, 고급 기능)
 web-to-markdown            # 웹페이지를 마크다운으로 변환
@@ -661,7 +727,7 @@ my-skills-hub/
 │   ├── codex-claude-loop/       # Claude + Codex 이중 AI 엔지니어링 루프
 │   │   ├── SKILL.md
 │   │   └── README.md
-│   ├── landing-page-guide/      # 랜딩페이지 제작 가이드
+│   ├── landing-page-guide-v2/   # 아름다운 디자인 + 높은 전환율 랜딩페이지 가이드
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       ├── 11-essential-elements.md
@@ -696,7 +762,7 @@ my-skills-hub/
 - [Codex 상세 정보](./skills/codex/skill.md)
 - [Codex-Claude Loop 상세 정보](./skills/codex-claude-loop/SKILL.md)
 - [Codex-Claude Loop 사용법](./skills/codex-claude-loop/README.md)
-- [Landing Page Guide 상세 정보](./skills/landing-page-guide/SKILL.md)
+- [Landing Page Guide V2 상세 정보](./skills/landing-page-guide-v2/SKILL.md)
 - [Card News Generator 상세 정보](./skills/card-news-generator/SKILL.md)
 - [Card News Generator V2 상세 정보](./skills/card-news-generator/V2_FEATURES.md)
 - [Web to Markdown 상세 정보](./.claude/skills/web-to-markdown/SKILL.md)
